@@ -1,7 +1,6 @@
 # Cards Ionic
 
 ## Configurar Android SDK no Linux
-
 ```
 $ export ANDROID_SDK_ROOT=$HOME/Android/sdk
 $ export PATH=$PATH:$ANDROID_SDK_ROOT/tools/bin
@@ -11,7 +10,6 @@ $ export PATH=$PATH:$ANDROID_SDK_ROOT/build-tools/30.0.3
 ```
 
 ## Criar um novo projeto ionic
-
 ```
 $ ionic start
 
@@ -25,26 +23,22 @@ the first argument to ionic start.
 ```
 
 ## Configurar o projeto para o Android
-
-### Para Capacitor
+- Adicione o caminho de instalação do Android Studio no arquivo .bashrc
+```
+export CAPACITOR_ANDROID_STUDIO_PATH="/home/{nome-user}/android-studio/bin/studio.sh"
+```
 
 - Execute  uma compilação Ionic
-
 ```
 $ ionic build
-
 ```
 
 - Gere um projeto nativo
 ```
 $ ionic capacitor add android
-
 ```
 
-## Defina o ID do pacote
-
-### Para Capacitor
-
+## Definir o ID do pacote
 - Abra o arquivo capacitor.config.ts e altere a propriedade appId
 
 ```
@@ -61,3 +55,27 @@ const config: CapacitorConfig = {
 
 export default config;
 ```
+
+## Executar o projeto no Android Studio
+- Desenvolva o aplicativo Ionic e sincronize-o com o projeto nativo.
+
+```
+$ ionic capacitor copy android
+```
+
+- Execute o aplicativo em um simulador ou dispositivo.
+```
+$ ionic capacitor open android
+```
+
+## Inspecionar projeto sendo excutado no Android Studio
+- Abra Google Chrome e digite a url
+```
+chrome://inspect/#devices
+```
+
+## Executar projeto no Android Studio com Live Reload
+```
+$ ionic capacitor run android -l --hot=YOUR_IP_ADDRESS
+```
+
