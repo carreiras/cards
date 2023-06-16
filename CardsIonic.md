@@ -1,6 +1,13 @@
 # Cards Ionic
 
-## Configurar Android SDK no Linux
+## Instalar o Ionic
+ - Após instalar o Node.js
+```
+$ npm i -g @ionic/cli
+```
+
+
+## Configurar Android SDK
 ```
 $ export ANDROID_SDK_ROOT=$HOME/Android/sdk
 $ export PATH=$PATH:$ANDROID_SDK_ROOT/tools/bin
