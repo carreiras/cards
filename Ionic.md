@@ -5,7 +5,10 @@
 ```
 $ npm i -g @ionic/cli
 ```
-
+## Atualizar o Ionic
+```
+$ npm update -g @ionic
+```
 
 ## Configurar Android SDK
 ```
@@ -86,3 +89,12 @@ chrome://inspect/#devices
 $ ionic capacitor run android -l --hot=YOUR_IP_ADDRESS
 ```
 
+## Criar nova página
+```
+$ ionic g page <nome-da-pagina> [--spec=false]
+```
+
+## Instalar uma dependencia (Ex.: import 'rxjs/add/operator/map';)
+```
+$ npm install rxjs-compat
+```
